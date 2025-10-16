@@ -1,0 +1,1 @@
+Orinu est une plateforme dédiée à la BD africaine mystique et philosophique. Publiez, lisez et soutenez des récits profonds portés par les Origuns, guerriers de l’âme. Un nouveau souffle graphique venu du cœur du continent. 
