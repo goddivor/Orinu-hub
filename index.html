@@ -1,0 +1,162 @@
+<!--
+Optimized version of Orinu landing page.
+Features:
+• Configurable via HTML attributes and minimal JS (no coding skills required).
+• Organized sections for easy text/image updates.
+• Pre-defined color & font variables.
+• Uses Tailwind CDN + simple custom script to edit content manually from the page.
+-->
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orinu — Ce qui vient du cœur</title>
+  <meta name="description" content="Orinu — plateforme de BD africaines mystiques, philosophiques, passionnelles." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#2B0B3A',
+            mid: '#5C3B8A',
+            light: '#E9D8FF',
+            fire: '#FF6B35',
+            text: '#F8F6FF',
+            gray: '#BDB4C7'
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { background: linear-gradient(180deg,#2B0B3A 0%, #0C0611 100%); }
+    .editable:hover { outline: 1px dashed rgba(255,255,255,0.3); cursor: text; }
+  </style>
+</head>
+<body class="antialiased text-text font-sans">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Header -->
+    <header class="flex items-center justify-between py-6">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-mid to-[#8A5CD8] shadow-lg">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L14.5 8L21 9.5L16 14L17.5 21L12 17.5L6.5 21L8 14L3 9.5L9.5 8L12 2Z" fill="url(#g)" />
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#E9D8FF" />
+                <stop offset="1" stop-color="#FF6B35" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <h1 id="siteName" contenteditable="true" class="editable text-xl font-semibold">Orinu</h1>
+          <p id="siteTagline" contenteditable="true" class="editable text-xs text-gray -mt-1">La BD qui vient du cœur</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-6 items-center text-sm text-light">
+        <a href="#explore">Explorer</a>
+        <a href="#publish">Publier</a>
+        <a href="#origuns">Les Origuns</a>
+        <a href="#faq">FAQ</a>
+        <button class="ml-4 px-4 py-2 rounded-full bg-gradient-to-r from-fire to-light text-black font-semibold">Connexion</button>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-12">
+      <div>
+        <h2 id="heroTitle" contenteditable="true" class="editable text-4xl md:text-5xl font-display font-bold leading-tight mb-4">Orinu — <span class="text-light">Ce qui vient du cœur</span></h2>
+        <p id="heroDesc" contenteditable="true" class="editable text-lg text-gray mb-6">Une plateforme ouverte pour publier, lire et célébrer la BD africaine mystique et philosophique. Rejoignez les Origuns — les guerriers des âmes.</p>
+        <div class="flex gap-4">
+          <a href="#publish" class="px-6 py-3 rounded-full bg-gradient-to-r from-fire to-light font-semibold text-black shadow-lg">Publier votre Orinu</a>
+          <a href="#explore" class="px-6 py-3 rounded-full border border-white/20">Explorer</a>
+        </div>
+      </div>
+      <div class="relative">
+        <img id="heroImage" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop" alt="Illustration Orinu" class="rounded-2xl shadow-2xl border border-white/6" />
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section id="explore" class="mt-20 grid md:grid-cols-3 gap-8">
+      <div class="glass rounded-2xl p-6">
+        <h3 contenteditable="true" class="editable text-xl font-semibold mb-2">Notre mission</h3>
+        <p contenteditable="true" class="editable text-sm text-[#D9CFF0]">Démocratiser l'Orinu: offrir une scène mondiale aux auteurs africains et valoriser un style unique.</p>
+      </div>
+      <div class="glass rounded-2xl p-6">
+        <h3 contenteditable="true" class="editable text-xl font-semibold mb-2">Publier</h3>
+        <p contenteditable="true" class="editable text-sm text-[#D9CFF0]">Upload de planches, chapitres et séries. Support images & textes. Gestion simple des droits.</p>
+      </div>
+      <div class="glass rounded-2xl p-6">
+        <h3 contenteditable="true" class="editable text-xl font-semibold mb-2">Soutenir</h3>
+        <p contenteditable="true" class="editable text-sm text-[#D9CFF0]">Pourboires, abonnements, achats d'albums. Soutenez les créateurs.</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="mt-16">
+      <h3 class="text-2xl font-semibold mb-6">Fonctionnalités clés</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-xl p-5">
+          <h5 class="font-semibold mb-2">Upload facile</h5>
+          <p class="text-sm text-[#D9CFF0]">Glisser-déposer, redimensionnement et aperçu instantané.</p>
+        </div>
+        <div class="glass rounded-xl p-5">
+          <h5 class="font-semibold mb-2">Lecteur immersif</h5>
+          <p class="text-sm text-[#D9CFF0]">Lecture page par page, zoom et mode plein écran.</p>
+        </div>
+        <div class="glass rounded-xl p-5">
+          <h5 class="font-semibold mb-2">Découverte</h5>
+          <p class="text-sm text-[#D9CFF0]">Collections, recommandations et Origuns du mois.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mt-16 rounded-2xl p-8 bg-gradient-to-r from-[#3A1140]/60 to-mid/40 border border-white/6 flex items-center justify-between">
+      <div>
+        <h4 contenteditable="true" class="editable text-xl font-bold">Prêt à partager votre monde ?</h4>
+        <p contenteditable="true" class="editable text-sm text-[#D9CFF0]">Rejoignez la communauté des Origuns — publiez votre première planche en quelques minutes.</p>
+      </div>
+      <div>
+        <a href="#publish" class="px-5 py-3 rounded-full bg-gradient-to-r from-fire to-light text-black font-semibold">Commencer</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-24 pb-12 text-sm text-gray flex flex-col md:flex-row md:justify-between gap-6">
+      <div>
+        <div class="font-semibold">Orinu</div>
+        <div>© <span id="year"></span> Orinu — Ce qui vient du cœur</div>
+      </div>
+      <div class="flex gap-6">
+        <a href="#">Auteurs</a>
+        <a href="#">Guides</a>
+        <a href="#">CGU</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Auto-save edited content in localStorage for non-tech users
+    document.querySelectorAll('.editable').forEach(el => {
+      const key = el.id || el.textContent.slice(0,15);
+      const saved = localStorage.getItem(key);
+      if (saved) el.textContent = saved;
+      el.addEventListener('input', () => localStorage.setItem(key, el.textContent));
+    });
+  </script>
+</body>
+</html>
