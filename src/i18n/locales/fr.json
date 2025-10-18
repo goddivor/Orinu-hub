@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "categories": "Catégories",
+    "weeklyChapters": "Chapitres de la semaine",
+    "search": "Rechercher..."
+  },
+  "sections": {
+    "trending": "Orinu Tendances & Populaires",
+    "popularByCategory": "Orinu populaires par catégorie",
+    "newOriginal": "Nouvelles Orinu d'ORIGINAL",
+    "weekly": "Orinu Hebdo",
+    "seeAll": "Voir tous",
+    "features": "Fonctionnalités",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "days": {
+    "monday": "Lundi",
+    "tuesday": "Mardi",
+    "wednesday": "Mercredi",
+    "thursday": "Jeudi",
+    "friday": "Vendredi",
+    "saturday": "Samedi",
+    "sunday": "Dimanche"
+  },
+  "categories": {
+    "action": "Action",
+    "adventure": "Aventure",
+    "mystical": "Mystique",
+    "romance": "Romance",
+    "comedy": "Comédie",
+    "drama": "Drame",
+    "fantasy": "Fantastique",
+    "scifi": "Science-Fiction"
+  },
+  "features": {
+    "title": "Ce que nous proposons",
+    "publish": {
+      "title": "Publier facilement",
+      "desc": "Téléchargez vos planches et chapitres en quelques clics"
+    },
+    "read": {
+      "title": "Lecteur immersif",
+      "desc": "Profitez d'une expérience de lecture optimale"
+    },
+    "discover": {
+      "title": "Découvrir",
+      "desc": "Explorez des milliers de BD africaines"
+    },
+    "community": {
+      "title": "Communauté",
+      "desc": "Rejoignez une communauté de passionnés"
+    }
+  },
+  "about": {
+    "title": "À propos de Orinu",
+    "description": "Orinu est une plateforme dédiée à la bande dessinée africaine. Notre mission est de promouvoir les talents africains et de partager des histoires uniques avec le monde entier."
+  },
+  "footer": {
+    "help": "Aide",
+    "terms": "Conditions d'utilisation",
+    "contact": "Contact",
+    "copyright": "© 2025 Orinu - Tous droits réservés"
+  }
+}

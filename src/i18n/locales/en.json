@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "weeklyChapters": "Weekly Chapters",
+    "search": "Search..."
+  },
+  "sections": {
+    "trending": "Trending & Popular Orinu",
+    "popularByCategory": "Popular Orinu by category",
+    "newOriginal": "New ORIGINAL Orinu",
+    "weekly": "Weekly Orinu",
+    "seeAll": "See all",
+    "features": "Features",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "days": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  },
+  "categories": {
+    "action": "Action",
+    "adventure": "Adventure",
+    "mystical": "Mystical",
+    "romance": "Romance",
+    "comedy": "Comedy",
+    "drama": "Drama",
+    "fantasy": "Fantasy",
+    "scifi": "Sci-Fi"
+  },
+  "features": {
+    "title": "What we offer",
+    "publish": {
+      "title": "Easy Publishing",
+      "desc": "Upload your pages and chapters in just a few clicks"
+    },
+    "read": {
+      "title": "Immersive Reader",
+      "desc": "Enjoy an optimal reading experience"
+    },
+    "discover": {
+      "title": "Discover",
+      "desc": "Explore thousands of African comics"
+    },
+    "community": {
+      "title": "Community",
+      "desc": "Join a community of enthusiasts"
+    }
+  },
+  "about": {
+    "title": "About Orinu",
+    "description": "Orinu is a platform dedicated to African comics. Our mission is to promote African talent and share unique stories with the world."
+  },
+  "footer": {
+    "help": "Help",
+    "terms": "Terms of Use",
+    "contact": "Contact",
+    "copyright": "© 2025 Orinu - All rights reserved"
+  }
+}
