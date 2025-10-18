@@ -1,18 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-base: #2B0B3A;
+  --color-mid: #5C3B8A;
+  --color-light: #E9D8FF;
+  --color-fire: #FF6B35;
+  --color-text: #F8F6FF;
+  --color-gray: #BDB4C7;
+
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
 
 @font-face {
   font-family: "SpaceGrotesk";
   src: local("SpaceGrotesk"), url("./assets/fonts/SpaceGrotesk.ttf");
 }
 
+@font-face {
+  font-family: "AfricanStyle";
+  src: local("AfricanStyle") url("./assets/fonts/AfricanStyle.ttf");
+}
+
+@font-face {
+  font-family: "Hellbone-Demo";
+  src: url("Hellbone-Demo") url("./assets/fonts/Hellbone-Demo.otf");
+}
+
 body {
   margin: 0;
   padding: 0;
-  color: #212121;
+  background: linear-gradient(180deg, #2B0B3A 0%, #0C0611 100%);
+  background-attachment: fixed;
+  color: #F8F6FF;
   box-sizing: border-box;
-  font-family: "SpaceGrotesk", sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 button {
   cursor: pointer;
+}
+
+.glass {
+  background: rgba(92, 59, 138, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
