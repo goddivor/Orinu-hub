@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Home, Category, Book, Profile, SearchNormal1, Global } from 'iconsax-react';
+import { useAuth } from '../../context/auth-context';
+import ProfileDropdown from '../ProfileDropdown';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onOpenLogin: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
   const { t, i18n } = useTranslation();
+  const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
 
   const toggleLanguage = () => {
@@ -18,7 +25,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img
-              src="/ousagi.png"
+              src="/logo_light.png"
               alt="Orinu Logo"
               className="h-10 w-10 object-contain"
               onError={(e) => {
@@ -72,16 +79,27 @@ const Header: React.FC = () => {
             {/* Language Switcher */}
             <button
               onClick={toggleLanguage}
-              className="p-2 hover:bg-mid/30 rounded-full transition"
+              className="relative p-2 hover:bg-mid/30 rounded-full transition group"
               title={i18n.language === 'fr' ? 'Switch to English' : 'Passer en Français'}
             >
               <Global size={22} color="#E9D8FF" />
+              <span className="absolute -bottom-1 -right-1 px-1.5 py-0.5 text-[10px] font-bold bg-fire text-black rounded-full">
+                {i18n.language.toUpperCase()}
+              </span>
             </button>
 
             {/* Profile/Login */}
-            <button className="p-2 hover:bg-mid/30 rounded-full transition">
-              <Profile size={22} color="#FF6B35" />
-            </button>
+            {user ? (
+              <ProfileDropdown />
+            ) : (
+              <button
+                onClick={onOpenLogin}
+                className="p-2 hover:bg-mid/30 rounded-full transition"
+                title="Se connecter"
+              >
+                <Profile size={22} color="#FF6B35" />
+              </button>
+            )}
           </div>
         </div>
 
