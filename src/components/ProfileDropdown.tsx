@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router';
-import { User, Profile2User, Setting2, Message, Clock, LogoutCurve } from 'iconsax-react';
+import { Profile2User, Setting2, Message, Clock, LogoutCurve } from 'iconsax-react';
 import { useAuth } from '../context/auth-context';
 import { useToast } from '../context/toast-context';
 import ConfirmationModal from './modals/confirmation-modal';
