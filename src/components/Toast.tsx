@@ -27,64 +27,64 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast }) => {
 
   const getToastStyles = () => {
     const baseStyles =
-      "flex items-start space-x-3 p-4 rounded-xl shadow-lg border backdrop-blur-sm";
+      "flex items-start space-x-3 p-4 rounded-xl shadow-2xl border backdrop-blur-xl";
 
     switch (toast.type) {
       case "success":
-        return `${baseStyles} bg-green-50/90 border-green-200/60 text-green-800`;
+        return `${baseStyles} bg-gradient-to-r from-light/20 to-light/10 border-light/30 text-light`;
       case "error":
-        return `${baseStyles} bg-red-50/90 border-red-200/60 text-red-800`;
+        return `${baseStyles} bg-gradient-to-r from-fire/20 to-fire/10 border-fire/30 text-light`;
       case "warning":
-        return `${baseStyles} bg-yellow-50/90 border-yellow-200/60 text-yellow-800`;
+        return `${baseStyles} bg-gradient-to-r from-yellow-500/20 to-yellow-500/10 border-yellow-500/30 text-light`;
       case "info":
-        return `${baseStyles} bg-blue-50/90 border-blue-200/60 text-blue-800`;
+        return `${baseStyles} bg-gradient-to-r from-mid/80 to-base/80 border-white/20 text-light`;
       default:
-        return `${baseStyles} bg-gray-50/90 border-gray-200/60 text-gray-800`;
+        return `${baseStyles} bg-gradient-to-r from-gray/20 to-gray/10 border-gray/30 text-light`;
     }
   };
 
   const getIcon = () => {
-    const iconProps = { size: 20, variant: "Bold" as const };
+    const iconProps = { size: 22, variant: "Bold" as const };
 
     switch (toast.type) {
       case "success":
         return (
           <TickCircle
-            color="green"
+            color="#E9D8FF"
             {...iconProps}
-            className="text-green-600 mt-0.5 flex-shrink-0"
+            className="mt-0.5 flex-shrink-0"
           />
         );
       case "error":
         return (
           <CloseCircle
-            color="red"
+            color="#FF6B35"
             {...iconProps}
-            className="text-red-600 mt-0.5 flex-shrink-0"
+            className="mt-0.5 flex-shrink-0"
           />
         );
       case "warning":
         return (
           <Warning2
-            color="yellow"
+            color="#FFB800"
             {...iconProps}
-            className="text-yellow-600 mt-0.5 flex-shrink-0"
+            className="mt-0.5 flex-shrink-0"
           />
         );
       case "info":
         return (
           <InfoCircle
-            color="blue"
+            color="#E9D8FF"
             {...iconProps}
-            className="text-blue-600 mt-0.5 flex-shrink-0"
+            className="mt-0.5 flex-shrink-0"
           />
         );
       default:
         return (
           <InfoCircle
-            color="gray"
+            color="#BDB4C7"
             {...iconProps}
-            className="text-gray-600 mt-0.5 flex-shrink-0"
+            className="mt-0.5 flex-shrink-0"
           />
         );
     }
@@ -106,16 +106,16 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast }) => {
       {getIcon()}
 
       <div className="flex-1 min-w-0">
-        <h4 className="font-medium text-sm leading-5">{toast.title}</h4>
+        <h4 className="font-semibold text-sm leading-5">{toast.title}</h4>
         {toast.message && (
-          <p className="text-sm opacity-90 mt-1 leading-relaxed">
+          <p className="text-sm text-gray mt-1 leading-relaxed">
             {toast.message}
           </p>
         )}
         {toast.action && (
           <button
             onClick={toast.action.onClick}
-            className="text-sm font-medium underline mt-2 hover:no-underline transition-all"
+            className="text-sm font-medium text-fire underline mt-2 hover:text-light hover:no-underline transition-all"
           >
             {toast.action.label}
           </button>
@@ -124,10 +124,10 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast }) => {
 
       <button
         onClick={handleClose}
-        className="flex-shrink-0 ml-2 p-1 rounded-full hover:bg-black/10 transition-colors"
+        className="flex-shrink-0 ml-2 p-1 rounded-full hover:bg-white/10 transition-colors"
         aria-label="Close notification"
       >
-        <X size={16} className="opacity-60" />
+        <X size={18} className="text-light" weight="bold" />
       </button>
     </div>
   );
