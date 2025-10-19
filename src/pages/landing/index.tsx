@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
+import LoginModal from '../../components/modals/LoginModal';
 import OrinuCard from '../../components/OrinuCard';
 import { mockOrinus, categories, weekDays } from '../../data/mockOrinus';
 import { ArrowRight2, Book1, People, MessageText, Global } from 'iconsax-react';
@@ -10,6 +11,7 @@ const Landing: React.FC = () => {
   const { t } = useTranslation();
   const [selectedDay, setSelectedDay] = useState('monday');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   // Filtrer les Orinus par catégorie et jour
   const trendingOrinus = mockOrinus.slice(0, 6);
@@ -21,7 +23,7 @@ const Landing: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-base via-[#1a0525] to-base">
-      <Header />
+      <Header onOpenLogin={() => setIsLoginModalOpen(true)} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Section: Orinu Tendances & Populaires */}
@@ -214,6 +216,12 @@ const Landing: React.FC = () => {
       </main>
 
       <Footer />
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+      />
     </div>
   );
 };
