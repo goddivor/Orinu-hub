@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/ousagi.png"
+                src="/logo_light.png"
                 alt="Orinu"
                 className="h-8 w-8 object-contain"
                 onError={(e) => {
